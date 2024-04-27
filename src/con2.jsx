@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import FileInput from './fileinput'; // Assuming FileInput component is correctly implemented
+import FileInput from './fileinput'; 
 
 const SubmissionForm = () => {
   const [name, setName] = useState('');
@@ -11,7 +11,7 @@ const SubmissionForm = () => {
   const [submittedData, setSubmittedData] = useState([]);
   const [isSubmitted, setIsSubmitted] = useState(false); // Add isSubmitted state variable
 
-  // Retrieve existing data from local storage on component mount
+  
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem('formData')) || [];
     setSubmittedData(savedData);
@@ -20,14 +20,14 @@ const SubmissionForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = { name, email, message, fileName }; // Include fileName in the formData
-    const updatedData = [...submittedData, formData]; // Append new form data to existing data
+    const updatedData = [...submittedData, formData]; 
     setSubmittedData(updatedData);
-    localStorage.setItem('formData', JSON.stringify(updatedData)); // Store updated data in local storage
-    setIsSubmitted(true); // Set isSubmitted to true when the form is submitted
+    localStorage.setItem('formData', JSON.stringify(updatedData)); 
+    setIsSubmitted(true); 
     setName('');
     setEmail('');
     setMessage('');
-    setFileName(''); // Clear the file name after submission
+    setFileName(''); 
   };
 
   return (
