@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700&display=swap');
+
+/* Add this CSS to your stylesheet or CSS file */
+
+.file-input {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.file-input input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.upload-btn {
+  background-color: #4CAF50;
+  top:70%;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background-color: #45a049;
+}
+.submission-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.submission-table th,
+.submission-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.submission-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.submission-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.submission-table tbody tr:hover {
+  background-color: #ddd;
+}
+
